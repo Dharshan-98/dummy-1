@@ -79,6 +79,7 @@ plt.ylabel('Number of Occurrences', fontsize=12)
 plt.xlabel('Reason type', fontsize=12)
 plt.title('Count of Reason type', fontsize=15)
 plt.xticks(rotation='vertical')
+plt.savefig('figure 1.png')
 plt.show()
 
 color = sns.color_palette()
@@ -90,6 +91,7 @@ plt.xlabel('Location name', fontsize=12)
 plt.title('Breakdown location count', fontsize=15)
 plt.xticks(rotation='vertical')
 plt.show()
+plt.savefig('figure 2.png')
 plt.tight_layout()
 
 
@@ -106,7 +108,7 @@ pie, ax = plt.subplots(figsize=[10,6])
 labels = c.keys()
 plt.pie(x=c, autopct="%.1f%%", explode=[0.05]*10, labels=labels, pctdistance=0.5)
 plt.title(" Bus Company name", fontsize=14)
-
+plt.savefig('figure 3.png')
 
 # *The third part of visualisation shows the number of running late/breakdown buses in different cities and the number of Pre-K, school age students travelling by bus in different locations during a breakdown/running late. As evident from the plot, the busses running late due to traffic seems to be higher in all the cities and also the school age students travelling by bus are higher in all cities compared to the pre-k students. The following code visualises the plot:*
 # 
@@ -125,6 +127,7 @@ for p in ax.patches:
             p.get_height(), 
             '{0:.2f}'.format(p.get_height()), 
             color='black', rotation='horizontal', size='large')
+plt.savefig('figure 4.png')
 
 sns.set_theme(style="ticks")
 j = sns.catplot(data=df,kind='count',x='breakdown_or_running_late',hue='boro', height=6,aspect=3)
@@ -137,7 +140,7 @@ for p in ax.patches:
             p.get_height() * 1.02, 
             '{0:.2f}'.format(p.get_height()), 
             color='black', rotation='horizontal', size='large')
-
+plt.savefig('figure 5.png')
 
 # In[ ]:
 
@@ -159,7 +162,7 @@ for p in ax.patches:
             p.get_height() * 1.02, 
             '{0:.2f}'.format(p.get_height()), 
             color='black', rotation='horizontal', size='large')
-
+plt.savefig('figure 6.png')
 
 # In[15]:
 
@@ -175,4 +178,5 @@ for p in ax.patches:
             p.get_height() * 1.02, 
             '{0:.2f}'.format(p.get_height()), 
             color='black', rotation='horizontal', size='large')
+plt.savefig('figure 7.png')
 
